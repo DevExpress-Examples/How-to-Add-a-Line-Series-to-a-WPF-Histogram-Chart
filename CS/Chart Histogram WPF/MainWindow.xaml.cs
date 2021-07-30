@@ -21,8 +21,7 @@ namespace Chart_Histogram_WPF {
     public partial class MainWindow : ThemedWindow {
         public MainWindow() {
             InitializeComponent();
-        }
-        
+        }    
     }
     public class ViewModel {
         public ObservableCollection<Point> PointsCollection { get; private set; }
