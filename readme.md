@@ -1,5 +1,5 @@
 *Files to look at*:
-- [MainWindow.xaml.cs](./CS/Chart Histogram WPF/MainWindow.xaml.cs) ([MainWindow.xaml.vb](./VB/Chart Histogram WPF/MainWindow.xaml.vb))
+- [MainWindow.xaml.cs](./CS/Chart-Histogram-WPF/MainWindow.xaml.cs) ([MainWindow.xaml.vb](./VB/Chart Histogram WPF/MainWindow.xaml.vb))
 - [MainWindow.xaml](./CS/Chart Histogram WPF/MainWindow.xaml)
 
 # How to Add a Line Series to a Histogram Chart
