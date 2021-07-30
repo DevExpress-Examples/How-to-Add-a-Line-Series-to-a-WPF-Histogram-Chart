@@ -19,12 +19,8 @@
                          GridLinesVisible="True">
                         <dxc:AxisX2D.NumericScaleOptions>
                             <dxc:IntervalNumericScaleOptions AggregateFunction="Histogram"
-                                                     OverflowValue="20"
-                                                     UnderflowValue="-30"
                                                      GridLayoutMode="GridAndLabelCentered"
-                                                     Pattern="{}{OB}{A1:F0}; {A2:F0}{CB}"
-                                                     OverflowValuePattern="{}{OS} {A1:F0}"
-                                                     UnderflowValuePattern="{}{US} {A2:F0}"/>
+                                                     Pattern="{}{OB}{A1:F0}; {A2:F0}{CB}"/>
                         </dxc:AxisX2D.NumericScaleOptions>
                     </dxc:AxisX2D>
                 </dxc:XYDiagram2D.AxisX>
