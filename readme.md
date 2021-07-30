@@ -9,12 +9,8 @@ The following example shows how to plot a common XY series with a histogram in t
 ![](images/histogram-chart.png)
 
 1. Create and configure histogram and line series.
-<<<<<<< HEAD
-2. Add a `ViewModel`and assign it to the [](xref:System.Windows.FrameworkElement.DataContext) property. 
-=======
 2. Add a `ViewModel`and assign it to the [DataContext](https://docs.microsoft.com/en-us/dotnet/api/system.windows.frameworkelement.datacontext?view=net-5.0#System_Windows_FrameworkElement_DataContext) property. 
->>>>>>> 1f334e32486212f2e037422241be51d23b66dc50
-2. Use the [Series.DataSource](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.Series.DataSource) property to bind series to an observable collection from the `ViewModel`.
+3. Use the [Series.DataSource](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.Series.DataSource) property to bind series to an observable collection from the `ViewModel`.
 
 ## Documentation
 
