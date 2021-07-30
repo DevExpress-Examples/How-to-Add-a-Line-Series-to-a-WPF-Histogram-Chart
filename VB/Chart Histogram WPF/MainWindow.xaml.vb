@@ -24,8 +24,6 @@ Namespace Chart_Histogram_WPF
 		Public Sub New()
 			InitializeComponent()
 		End Sub
-
-
 	End Class
 	Public Class ViewModel
 		Private privatePointsCollection As ObservableCollection(Of Point)
@@ -37,7 +35,6 @@ Namespace Chart_Histogram_WPF
 				privatePointsCollection = value
 			End Set
 		End Property
-
 		Public Sub New()
 			PointsCollection = CreatePointsCollection(20)
 		End Sub
