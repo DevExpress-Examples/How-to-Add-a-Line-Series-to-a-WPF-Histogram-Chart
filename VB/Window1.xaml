@@ -1,0 +1,68 @@
+﻿<Window x:Class="SideBySideBar2DChart.Window1" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" 
+        Title="WPF Chart" Height="350" Width="620">
+    <Grid>
+        <dxc:ChartControl Name="chartControl1">
+            <dxc:ChartControl.Diagram>
+                <dxc:XYDiagram2D x:Name="diagram">
+                    <dxc:XYDiagram2D.AxisX>
+                        <dxc:AxisX2D Name="primaryAxisX">
+                            <dxc:AxisX2D.NumericScaleOptions>
+                                <dxc:IntervalNumericScaleOptions/>
+                            </dxc:AxisX2D.NumericScaleOptions>
+                        </dxc:AxisX2D>
+                    </dxc:XYDiagram2D.AxisX>
+
+                    <dxc:XYDiagram2D.SecondaryAxesX>
+                        <dxc:SecondaryAxisX2D Name="secondaryAxisX">
+                            <dxc:SecondaryAxisX2D.NumericScaleOptions>
+                                <dxc:ContinuousNumericScaleOptions/>
+                            </dxc:SecondaryAxisX2D.NumericScaleOptions>
+                            <dxc:SecondaryAxisX2D.WholeRange>
+                                <dxc:Range SideMarginsValue="0"/>
+                            </dxc:SecondaryAxisX2D.WholeRange>
+                        </dxc:SecondaryAxisX2D>
+                    </dxc:XYDiagram2D.SecondaryAxesX>
+
+                    <dxc:XYDiagram2D.SecondaryAxesY>
+                        <dxc:SecondaryAxisY2D Name="DistributionAxis"/>
+                    </dxc:XYDiagram2D.SecondaryAxesY>
+
+                    <dxc:XYDiagram2D.Series>
+                        <dxc:BarStackedSeries2D 
+                            BarWidth="1"
+                            x:Name="Bars"
+                            LabelsVisibility="False" 
+                            DisplayName="Random Distribution" 
+                            ArgumentScaleType="Numerical"
+                            Opacity="0.3"
+                            Brush="Blue"
+                            AggregateFunction="Histogram">
+                            
+                            <dxc:BarStackedSeries2D.Model>
+                                <dxc:TransparentBar2DModel/>
+                            </dxc:BarStackedSeries2D.Model>
+                        </dxc:BarStackedSeries2D>
+
+                        <dxc:SplineAreaSeries2D
+                            x:Name="Spline"
+                            DisplayName="Normal Distribution"
+                            Transparency="0.3"
+                            AggregateFunction="None"
+                            ArgumentScaleType="Numerical"
+                            AxisX="{Binding ElementName=secondaryAxisX}"
+                            AxisY="{Binding ElementName=DistributionAxis}"
+                            Brush="LimeGreen">
+                        </dxc:SplineAreaSeries2D>
+
+                    </dxc:XYDiagram2D.Series>
+                </dxc:XYDiagram2D>
+            </dxc:ChartControl.Diagram>
+            <dxc:ChartControl.Legend>
+                <dxc:Legend />
+            </dxc:ChartControl.Legend>
+        </dxc:ChartControl>
+    </Grid>
+</Window>

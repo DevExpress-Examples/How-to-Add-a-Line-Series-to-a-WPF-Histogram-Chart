@@ -5,7 +5,7 @@ Imports System.Data
 Imports System.Linq
 Imports System.Windows
 
-Namespace Chart_Histogram_WPF
+Namespace SideBySideBar2DChart
 	''' <summary>
 	''' Interaction logic for App.xaml
 	''' </summary>
