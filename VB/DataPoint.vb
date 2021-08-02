@@ -1,10 +1,4 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports System.Linq
-Imports System.Text
-Imports System.Threading.Tasks
-
-Namespace SideBySideBar2DChart
+﻿Namespace SideBySideBar2DChart
 	Public Class DataPoint
 		Public Property XValue() As Double
 		Public Property YValue() As Double

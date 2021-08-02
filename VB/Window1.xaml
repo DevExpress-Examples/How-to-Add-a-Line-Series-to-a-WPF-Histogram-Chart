@@ -1,8 +1,11 @@
 ﻿<Window x:Class="SideBySideBar2DChart.Window1" 
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
         xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" 
-        Title="WPF Chart" Height="350" Width="620">
+        xmlns:local="clr-namespace:SideBySideBar2DChart"
+        Title="WPF Chart" Height="350" Width="620"
+        DataContext="{dxmvvm:ViewModelSource Type=local:ViewModel}">
     <Grid>
         <dxc:ChartControl Name="chartControl1">
             <dxc:ChartControl.Diagram>
@@ -27,42 +30,32 @@
                     </dxc:XYDiagram2D.SecondaryAxesX>
 
                     <dxc:XYDiagram2D.SecondaryAxesY>
-                        <dxc:SecondaryAxisY2D Name="DistributionAxis"/>
+                        <dxc:SecondaryAxisY2D Name="secondaryAxisY"/>
                     </dxc:XYDiagram2D.SecondaryAxesY>
 
                     <dxc:XYDiagram2D.Series>
                         <dxc:BarStackedSeries2D 
-                            BarWidth="1"
-                            x:Name="Bars"
-                            LabelsVisibility="False" 
-                            DisplayName="Random Distribution" 
+                            DataSource="{Binding Histogram}"
+                            DisplayName="Histogram" 
+                            ArgumentDataMember = "XValue"
+                            ValueDataMember = "YValue"
                             ArgumentScaleType="Numerical"
-                            Opacity="0.3"
-                            Brush="Blue"
-                            AggregateFunction="Histogram">
-                            
-                            <dxc:BarStackedSeries2D.Model>
-                                <dxc:TransparentBar2DModel/>
-                            </dxc:BarStackedSeries2D.Model>
-                        </dxc:BarStackedSeries2D>
+                            AggregateFunction="Histogram"/>
 
-                        <dxc:SplineAreaSeries2D
-                            x:Name="Spline"
+                        <dxc:SplineSeries2D
+                            DataSource="{Binding NormalDistribution}"
                             DisplayName="Normal Distribution"
-                            Transparency="0.3"
+                            ArgumentDataMember = "XValue"
+                            ValueDataMember = "YValue"
                             AggregateFunction="None"
                             ArgumentScaleType="Numerical"
                             AxisX="{Binding ElementName=secondaryAxisX}"
-                            AxisY="{Binding ElementName=DistributionAxis}"
-                            Brush="LimeGreen">
-                        </dxc:SplineAreaSeries2D>
+                            AxisY="{Binding ElementName=secondaryAxisY}">
+                        </dxc:SplineSeries2D>
 
                     </dxc:XYDiagram2D.Series>
                 </dxc:XYDiagram2D>
             </dxc:ChartControl.Diagram>
-            <dxc:ChartControl.Legend>
-                <dxc:Legend />
-            </dxc:ChartControl.Legend>
         </dxc:ChartControl>
     </Grid>
 </Window>
