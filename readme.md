@@ -6,9 +6,9 @@
 
 The following example shows how to plot a common XY series with a histogram in the same chart:
 
-![](images/histogram-chart.png)
+![](images/histogramchart.png)
 
-In this example, an XY Series Range on the Secondary Axis aligns with a Histogram on the Primary Axis. 
+In this example, an XY series range on the secondary axis aligns with a histogram on the primary sxis. 
 
 ## Documentation
 
