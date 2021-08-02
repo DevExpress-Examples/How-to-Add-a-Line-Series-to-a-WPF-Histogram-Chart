@@ -1,5 +1,5 @@
 *Files to look at*:
-- [Window1.xaml.cs](./CS//Window1.xaml.cs) ([Window1.xaml.vb](./VB//Window1.xaml.vb))
+- [Window1.xaml.cs](./CS//Window1.xaml.cs) ([Window1.xaml.vb](./VB/chart-histogram-wpf/Window1.xaml.vb))
 - [Window1.xaml](./CS//Window1.xaml)
 
 # How to Plot a Common XY Series with a Histogram in the WPF Chart
