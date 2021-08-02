@@ -1,14 +1,14 @@
 *Files to look at*:
-- [MainWindow.xaml.cs](./CS//MainWindow.xaml.cs) ([MainWindow.xaml.vb](./VB//MainWindow.xaml.vb))
-- [MainWindow.xaml](./CS//MainWindow.xaml)
+- [Window1.xaml.cs](./CS//Window1.xaml.cs) ([Window1.xaml.vb](./VB//Window1.xaml.vb))
+- [Window1.xaml](./CS//Window1.xaml)
 
 # How to Plot a Common XY Series with a Histogram in the WPF Chart
 
 The following example shows how to plot a common XY series with a histogram in the same chart:
 
-![](images/histogram-chart.png)
+![](images/histogramchart.png)
 
-In this example, an XY Series Range on the Secondary Axis aligns with a Histogram on the Primary Axis. 
+In this example, an XY series range on the secondary axis aligns with a histogram on the primary axis. 
 
 ## Documentation
 
