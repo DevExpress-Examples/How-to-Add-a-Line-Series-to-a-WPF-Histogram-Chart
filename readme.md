@@ -1,16 +1,14 @@
 *Files to look at*:
-- [MainWindow.xaml.cs](./CS/Chart%20Histogram%20WPF/MainWindow.xaml.cs) ([MainWindow.xaml.vb](./VB/Chart%20Histogram%20WPF/MainWindow.xaml.vb))
-- [MainWindow.xaml](./CS/Chart%20Histogram%20WPF/MainWindow.xaml)
+- [MainWindow.xaml.cs](./CS//MainWindow.xaml.cs) ([MainWindow.xaml.vb](./VB//MainWindow.xaml.vb))
+- [MainWindow.xaml](./CS//MainWindow.xaml)
 
-# How to Add a Line Series to a Histogram Chart
+# How to Plot a Common XY Series with a Histogram in the WPF Chart
 
 The following example shows how to plot a common XY series with a histogram in the same chart:
 
 ![](images/histogram-chart.png)
 
-1. Create and configure histogram and line series.
-2. Add a `ViewModel`and assign it to the [DataContext](https://docs.microsoft.com/en-us/dotnet/api/system.windows.frameworkelement.datacontext?view=net-5.0#System_Windows_FrameworkElement_DataContext) property. 
-3. Use the [Series.DataSource](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.Series.DataSource) property to bind series to an observable collection from the `ViewModel`.
+In this example, an XY Series Range on the Secondary Axis aligns with a Histogram on the Primary Axis. 
 
 ## Documentation
 
