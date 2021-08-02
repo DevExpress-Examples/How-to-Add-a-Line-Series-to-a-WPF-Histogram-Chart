@@ -30,8 +30,7 @@ namespace SideBySideBar2DChart {
         public ObservableCollection<DataPoint> NormalDistribution { get; set; }
         public ObservableCollection<DataPoint> Histogram { get; set; }
 
-        private void UpdateData()
-        {
+        private void UpdateData() {
             NormalDistribution.Clear();
             RandomDistribution.Clear();
             Histogram.Clear();
@@ -39,24 +38,20 @@ namespace SideBySideBar2DChart {
             double mean = 5;
             double std = 1.5;
 
-            for (int x = 0; x <= 10; x++)
-            {
+            for (int x = 0; x <= 10; x++) {
                 RandomDistribution.Add(new DataPoint(x, GetNormalDistribution(x, mean, std)));
             }
 
-            for (int x = 0; x < 100; x++)
-            {
+            for (int x = 0; x < 100; x++) {
                 NormalDistribution.Add(new DataPoint(x/10.0, GetNormalDistribution(x/10.0, mean, std)));
             }
 
-            for (int x = 0; x <= 10; x++)
-            {
+            for (int x = 0; x <= 10; x++) {
                 Histogram.Add(new DataPoint(x, random.Next(10)));
             }
         }
 
-        private double GetNormalDistribution(double x, double mean, double std)
-        {
+        private double GetNormalDistribution(double x, double mean, double std) {
             double tmp = 1 / ((Math.Sqrt(2 * Math.PI) * std));
             return Math.Exp(-Math.Pow((x - mean), 2) / (2 * Math.Pow(std, 2))) * tmp;
         }
