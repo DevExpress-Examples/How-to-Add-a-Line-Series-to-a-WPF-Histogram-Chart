@@ -7,5 +7,8 @@
 			XValue = x
 			YValue = y
 		End Sub
+		Public Sub New(ByVal value As Double)
+			Me.New(value, value)
+		End Sub
 	End Class
 End Namespace

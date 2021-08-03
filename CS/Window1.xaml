@@ -1,57 +1,68 @@
-<Window x:Class="SideBySideBar2DChart.Window1" 
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
-        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" 
-        xmlns:local="clr-namespace:SideBySideBar2DChart"
-        Title="WPF Chart" Height="350" Width="620"
-        DataContext="{dxmvvm:ViewModelSource Type=local:ViewModel}">
+<Window
+    x:Class="SideBySideBar2DChart.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:local="clr-namespace:SideBySideBar2DChart"
+    Width="820.806"
+    Height="354.032"
+    DataContext="{dxmvvm:ViewModelSource Type=local:ViewModel}"
+    Title="WPF Chart">
     <Grid>
         <dxc:ChartControl Name="chartControl1">
             <dxc:ChartControl.Diagram>
                 <dxc:XYDiagram2D x:Name="diagram">
                     <dxc:XYDiagram2D.AxisX>
-                        <dxc:AxisX2D Name="primaryAxisX">
+                        <dxc:AxisX2D Name="primaryAxisX" Visible="True">
+                            <dxc:AxisX2D.WholeRange>
+                                <dxc:Range
+                                    MaxValue="{Binding MaxValue}"
+                                    MinValue="{Binding MinValue}"
+                                    SideMarginsValue="0" />
+                            </dxc:AxisX2D.WholeRange>
                             <dxc:AxisX2D.NumericScaleOptions>
-                                <dxc:IntervalNumericScaleOptions/>
+                                <dxc:CountIntervalNumericScaleOptions
+                                    Count="{Binding BinCount}"
+                                    GridLayoutMode="GridShiftedLabelCentered"
+                                    Pattern="{}{OB}{A1:F1}, {A2:F1}{CB}" />
                             </dxc:AxisX2D.NumericScaleOptions>
                         </dxc:AxisX2D>
                     </dxc:XYDiagram2D.AxisX>
 
                     <dxc:XYDiagram2D.SecondaryAxesX>
-                        <dxc:SecondaryAxisX2D Name="secondaryAxisX">
+                        <dxc:SecondaryAxisX2D Name="secondaryAxisX" Visible="False">
                             <dxc:SecondaryAxisX2D.NumericScaleOptions>
-                                <dxc:ContinuousNumericScaleOptions/>
+                                <dxc:ContinuousNumericScaleOptions />
                             </dxc:SecondaryAxisX2D.NumericScaleOptions>
                             <dxc:SecondaryAxisX2D.WholeRange>
-                                <dxc:Range SideMarginsValue="0"/>
+                                <dxc:Range SideMarginsValue="0" />
                             </dxc:SecondaryAxisX2D.WholeRange>
                         </dxc:SecondaryAxisX2D>
                     </dxc:XYDiagram2D.SecondaryAxesX>
 
                     <dxc:XYDiagram2D.SecondaryAxesY>
-                        <dxc:SecondaryAxisY2D Name="secondaryAxisY"/>
+                        <dxc:SecondaryAxisY2D Name="secondaryAxisY" />
                     </dxc:XYDiagram2D.SecondaryAxesY>
 
                     <dxc:XYDiagram2D.Series>
-                        <dxc:BarStackedSeries2D 
-                            DataSource="{Binding Histogram}"
-                            DisplayName="Histogram" 
+                        <dxc:BarStackedSeries2D
+                            AggregateFunction="Histogram"
                             ArgumentDataMember = "XValue"
-                            ValueDataMember = "YValue"
                             ArgumentScaleType="Numerical"
-                            AggregateFunction="Histogram"/>
+                            BarWidth="1"
+                            DataSource="{Binding Histogram}"
+                            DisplayName="Histogram" />
 
                         <dxc:SplineSeries2D
-                            DataSource="{Binding NormalDistribution}"
-                            DisplayName="Normal Distribution"
-                            ArgumentDataMember = "XValue"
-                            ValueDataMember = "YValue"
                             AggregateFunction="None"
+                            ArgumentDataMember = "XValue"
                             ArgumentScaleType="Numerical"
                             AxisX="{Binding ElementName=secondaryAxisX}"
-                            AxisY="{Binding ElementName=secondaryAxisY}">
-                        </dxc:SplineSeries2D>
+                            AxisY="{Binding ElementName=secondaryAxisY}"
+                            DataSource="{Binding NormalDistribution}"
+                            DisplayName="Normal Distribution"
+                            ValueDataMember = "YValue" />
 
                     </dxc:XYDiagram2D.Series>
                 </dxc:XYDiagram2D>
