@@ -8,7 +8,7 @@ The following example shows how to plot a common XY series with a histogram in t
 
 ![](images/histogramchart.png)
 
-In this example, an XY series range on the secondary axis aligns with a histogram on the primary axis. 
+In this example, a Line series displays a normal distribution curve on the secondary axis and aligns with a histogram on the primary axis. 
 
 ## Documentation
 
