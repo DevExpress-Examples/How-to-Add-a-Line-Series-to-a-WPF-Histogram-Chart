@@ -1,8 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 16
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SideBySideBar2DChartWithSpline", "SideBySideBar2DChartWithSpline.csproj", "{98B0F75A-5B7F-48EB-BE88-485B85B1CF89}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SideBySideBar2DChartWithSpline", "SideBySideBar2DChartWithSpline.Net5.vbproj", "{98B0F75A-5B7F-48EB-BE88-485B85B1CF89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
