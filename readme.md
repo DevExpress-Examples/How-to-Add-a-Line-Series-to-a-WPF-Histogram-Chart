@@ -3,17 +3,19 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1018251)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-*Files to look at*:
-- [Window1.xaml.cs](./CS//Window1.xaml.cs) ([Window1.xaml.vb](./VB/Window1.xaml.vb))
-- [Window1.xaml](./CS//Window1.xaml)
 
-# How to Plot an XY Series with a Histogram in the WPF Chart
+# Chart for WPF - How to Plot an XY Series with a Histogram
 
 The following example shows how to plot a common XY series with a histogram in the same chart:
 
 ![](images/histogramchart.png)
 
 In this example, a Line series displays a normal distribution curve on the secondary axis and is aligned with a histogram on the primary axis. 
+
+## Files to Review
+
+- [Window1.xaml.cs](./CS//Window1.xaml.cs) ([Window1.xaml.vb](./VB/Window1.xaml.vb))
+- [Window1.xaml](./CS//Window1.xaml)
 
 ## Documentation
 
